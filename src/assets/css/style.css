@@ -1,0 +1,14 @@
+#wrapper {
+    margin: 20px;
+}
+
+.col50 {
+    padding: 5%;
+    width: 40%;
+    float: left;
+}
+
+#generation-number {
+    text-transform: capitalize;
+    font-weight: bold;
+}
