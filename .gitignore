@@ -1,0 +1,7 @@
+# Node App Files #
+##################
+node_modules/
+
+# Deployment/IDE Tools #
+########################
+.idea/*
