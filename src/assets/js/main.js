@@ -71,6 +71,7 @@ function start() {
     return true;
   }
 
+  // ToDo: compute the grid value based on all the rules mentioned in the reqs
   function computeNextGeneration() {
     let nextGen = [];
 
