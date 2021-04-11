@@ -10,9 +10,6 @@ function start() {
   const currentGenerationTitle = document.getElementById('generation-number');
   const result = document.getElementById('result');
 
-  currentGenerationTitle.innerText = 'Hello';
-  result.innerHTML = generation1.value;
-
   function getNeighborCount(row, col) {
     function getCellValue(row, col) {
       let value = 0;
@@ -80,9 +77,10 @@ function start() {
     for (let i = 0; i < rowCount; i++) {
       nextGen[i] = [];
       for (let j = 0; j < colCount; j++) {
+        nextGen[i][j] = 0;
         const neighborCount = getNeighborCount(i, j);
 
-        if (neighborCount === 0 || neighborCount >= 5 || grid[i][j] == 0) {
+        if (neighborCount === 0 || neighborCount >= 5 || parseInt(grid[i][j]) === 0) {
           nextGen[i][j] = 0;
         }
         else {
@@ -95,5 +93,16 @@ function start() {
   }
 
   const value = init();
-  console.log(value);
+  let output = '';
+
+  for (let i = 0; i < rowCount; i++) {
+    for (let j = 0; j < colCount; j++) {
+      output = output + ' ' + value[i][j];
+    }
+
+    output = output + '<br />';
+  }
+
+  currentGenerationTitle.innerText = 'Generation 2';
+  result.innerHTML = output;
 }
