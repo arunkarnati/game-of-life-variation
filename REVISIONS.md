@@ -8,8 +8,9 @@
 ### Next Release
 
 - Add another field to take the future generation number. e.g., 20
-- Compute the cell value correctly based on the game rules.
+- Compute the overall grid value correctly based on the game rules.
 - Display the output of the computed generation in the same format as the input received.
+- Convert the input into an editable grid to make it easy to edit a single cell.
 
 ### Further, Releases (good to haves, UI improvements, etc.)
 
